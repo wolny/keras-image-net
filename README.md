@@ -1,7 +1,7 @@
 # keras-image-net
-Simple REST app for image classification using Keras pre-trained deep learning models
+Simple REST app for image classification using [Keras pre-trained deep learning models](https://keras.io/applications/)
 
-## Run
+## Run (Docker)
 ```
 docker build -t keras-image-net .
 docker run -p 5000:5000 keras-image-net
@@ -35,4 +35,14 @@ You should get the following response:
     "label": "hay"
   }]
 }
+```
+
+## Run (command line)
+Make sure you have Keras installed, then just
+```
+python src/res-net-50.py
+```
+You should see:
+```
+('Predicted:', [(u'n02106662', u'German_shepherd', 0.99324906), (u'n02096051', u'Airedale', 0.0033434019), (u'n02105162', u'malinois', 0.0015451796), (u'n03803284', u'muzzle', 0.0005292811), (u'n02091635', u'otterhound', 0.00021379442)])
 ```
