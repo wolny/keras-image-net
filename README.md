@@ -55,3 +55,12 @@ You should see:
 ```
 ('Predicted:', [(u'n02106662', u'German_shepherd', 0.99324906), (u'n02096051', u'Airedale', 0.0033434019), (u'n02105162', u'malinois', 0.0015451796), (u'n03803284', u'muzzle', 0.0005292811), (u'n02091635', u'otterhound', 0.00021379442)])
 ```
+
+## Run (GCP)
+
+```
+docker build -t eu.gcr.io/$PROJECT_NAME/keras-res-net .
+gcloud docker -- push eu.gcr.io/$PROJECT_NAME/keras-res-net
+kubectl run keras-res-net --image=eu.gcr.io/$PROJECT_NAME/keras-res-net --port=5000 --replicas=2
+kubectl expose deployment keras-res-net --type=LoadBalancer --name=keras-res-net
+```
