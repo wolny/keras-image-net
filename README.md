@@ -1,5 +1,14 @@
 # keras-image-net
-Simple REST app for image classification using [Keras pre-trained deep learning models](https://keras.io/applications/)
+Simple REST app for image classification using [Keras pre-trained deep learning models](https://keras.io/applications/).
+By default the app uses [pre-trained ResNet-50 model](https://github.com/KaimingHe/deep-residual-networks) described in the paper "Deep Residual Learning for Image Recognition"
+```
+@article{He2015,
+	author = {Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun},
+	title = {Deep Residual Learning for Image Recognition},
+	journal = {arXiv preprint arXiv:1512.03385},
+	year = {2015}
+}
+```
 
 ## Run (Docker)
 ```
